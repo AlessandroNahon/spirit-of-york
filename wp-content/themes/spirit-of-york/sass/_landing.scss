@@ -1,0 +1,36 @@
+$primary-color: #242429;
+$secondary-color: #bf845c;
+
+#landing {
+	background-color: $primary-color;
+	position: fixed;
+	overflow: hidden;
+	width: 100vw;
+	height: 100vh;
+	z-index: 100;
+	top:0;
+	left:0;
+	margin:0;
+	padding:0;
+	width: 100vw;
+	height: 100vh;
+	color: $secondary-color;
+	font-family: 'Surveyor', serif;
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	p {
+		padding-top: 50px;
+		font-weight: lighter;
+		font-size: 30px;
+		width: 500px;
+		text-align: center;
+		position: relative;
+		bottom: 50px;
+		@include breakpoint($phone) {
+			font-size: 20px;
+		}
+	}
+}

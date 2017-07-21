@@ -1,0 +1,162 @@
+@import 'breakpoints';
+
+$primray-color: #242429;
+$secondary-color: #bf845c;
+
+#home {
+	height: auto;
+
+	.links {
+		position: relative;
+		top: 125px;
+		display: flex;
+		justify-content: space-between;
+		z-index: 1;
+		@include breakpoint($phone) {
+			display: flex;
+			flex-wrap:wrap;
+		}
+		.link {
+			cursor: pointer;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			width: 33%;
+			@include breakpoint($phone) {
+				display: flex;
+				flex-wrap:wrap;
+				width: 95%;
+			}
+			.link-text {
+				transition: .3s ease-in-out;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 250px;
+				position: relative;	
+				.text {
+					@include breakpoint($phone) {
+						a,p {
+							border-bottom: 1px solid $secondary-color;
+						}
+					}
+					
+				}
+				.link-line {
+					transition: .3s ease-in-out;				
+				}
+				.hover-text {
+					padding:0;
+					margin:0;
+					display: none;
+					a, p {
+						font-size: .9em;
+						text-transform: none;
+					}
+				}
+			}
+			&:hover {
+				.link-text {
+					display: flex;
+					justify-content: space-between;
+					width: 300px;
+					@include breakpoint($phone) {
+						justify-content: center;
+					}
+				}
+				.link-line {
+					display: block;
+					width: 40px;
+					height: 1px;
+					background-color: $secondary-color;	
+					@include breakpoint($phone) {
+						display: none;
+					}			
+				}	
+			}
+			object {
+				width: 450px;
+				pointer-events: none;
+				@include breakpoint($tablet) {
+					width: 275px;
+					height: 50%;
+				}
+				@include breakpoint($phone) {
+					height: 50%;
+					width: 300px;
+				}
+			}
+			&:nth-child(1) {
+				border-right: 1px solid $secondary-color;
+				@include breakpoint($phone) {
+					border-right: none;
+					// border-bottom: 1px solid $secondary-color;
+				}
+			}
+			&:nth-child(3) {
+				border-left: 1px solid $secondary-color;
+				@include breakpoint($phone) {
+					border-left: none;
+					// border-top: 1px solid $secondary-color;
+				}
+			}
+			.home-links {
+				cursor: pointer;
+			}
+			a, p {
+				text-transform: uppercase;
+				color: $secondary-color;
+				letter-spacing: 1px;
+				font-weight: lighter;
+				font-size: 1em;
+				transition: .2s ease-in-out;
+				&:hover {
+					text-shadow: .5px .5px .5px rgba(255, 255, 255, 0.2);
+				}
+			}
+		}
+	}
+}
+
+.link-link {
+	position: relative;
+	z-index: 200;
+	cursor: pointer;
+}
+
+// #home:after {
+// 	display: block;
+// 	position: relative;
+// 	content: '';
+// 	height: 100px;
+// 	width: 100%;
+// 	background-color: red;
+// }
+
+#instagram {
+	width: 100%;
+	border-top: 1px solid $secondary-color;
+	// height: auto;
+	margin: 0 auto;
+	margin-top: 160px;
+	padding-top: 40px;
+	// padding-bottom: 10px;
+	.sb_instagram_header {
+		display: none;
+	}
+	#sbi_load {
+		display: none;
+	}
+	.sbi_photo_wrap {
+		filter: grayscale(100%);
+		-webkit-filter: grayscale(100%);
+		&:hover {
+			filter: grayscale(0%);
+			-webkit-filter: grayscale(0%);
+		}
+	}
+}
+
+

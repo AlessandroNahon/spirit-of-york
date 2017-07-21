@@ -1,0 +1,163 @@
+$primray-color: #242429;
+$secondary-color: #bf845c;
+
+header {
+	width: 95vw;
+	max-width: 1440px;
+	position: fixed;
+	top:0;
+	left: 50%;
+	transform: translateX(-50%);
+	margin:0 auto;
+	padding:0;
+	background-color: $primray-color;
+	z-index: 200;
+	display: flex;
+	justify-content: center;
+	@include breakpoint($phone) {
+		width: 100vw;
+	}
+	.container {
+		background-color: $primray-color;
+		font-weight: lighter;
+		border-bottom: 1px solid $secondary-color;
+		margin:0;
+		padding:0;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+		height: 125px;
+		// margin:0 auto;
+		position: relative;
+		width: 100%;
+		// h1, h2 {
+		// 	color: $secondary-color;
+		// 	text-transform: uppercase;
+		// 	font-family: 'Surveyor', serif;
+		// 	font-weight: lighter;
+		// 	letter-spacing: 1.5px;
+		// 	font-size: 24px;
+		// }
+		// h2 {
+		// 	font-size: 12px;
+		// }
+		@include breakpoint($phone) {
+			height: 75px;
+			width: 95%;
+			.header-logo {
+				width: 50%;
+				position: relative;
+				z-index: 200;
+			}
+		}
+		.empty {
+			width: 20px;
+			height: 20px;
+			@include breakpoint($phone) {
+				width: 38.66px;
+			}
+		}
+	}
+	.navigation {
+		display: flex;
+		align-content: center;
+		align-items: center;
+		justify-content: space-between;
+		width: auto;
+		// padding-right: 2.5%;
+		position: fixed;
+		right:-275px;
+		z-index:0;
+		top: 43%;
+		text-align: right;
+		@include breakpoint($phone) {
+			position: fixed;
+			overflow: hidden;
+			z-index: 100;
+			top:0;
+			background-color: $primray-color;
+			justify-content: center;
+			width: 100vw;
+			height: 100vh;
+
+		}
+		.nav-line {
+			display: block;
+			position: relative;
+			right: 15px;
+			// bottom: 49px;
+			width: 40px;
+			height: 1px;
+			background-color: $secondary-color;
+			@include breakpoint($phone) {
+				display: none;
+			}
+		}
+		ul#menu-menu-1.menu {
+			font-size: 12px;
+			display: block;
+			list-style: none;
+			padding-left: 0;
+			padding:0;
+			position: relative;
+			@include breakpoint($phone) {
+				// font-family: 'Surveyor';
+				letter-spacing: .5px;
+				text-align: center;
+				font-size: 30px;
+				line-height: 60px;
+			}
+			li {
+				&:nth-child(1) {
+					// margin-left: 15px;
+				}
+				display: inline;
+				@include breakpoint($phone) {
+					display: block;
+				}
+			}
+		}
+	}
+	.hamburger {
+		position: relative;
+		color: $secondary-color;
+		text-transform: uppercase;
+		text-align: right;
+		z-index: 200;
+		right:0;
+		// top:41px;
+		font-size: 12px;
+		cursor: pointer;
+		display: inline-block;
+		letter-spacing: 1px;
+
+	}
+}
+// .menu {
+// 	display: none;
+// }
+
+
+ul {
+	margin:0;
+}
+
+// ul.menu {
+// 	margin: 0;
+// 	padding: 0;
+// 	li {
+// 		display: inline-block;
+// 		// margin-right: 10px;
+// 		margin: 0;
+// 		padding: 0;
+// 		a {
+// 			margin: 0;
+// 			padding: 0;
+// 			color: #333;
+// 			// padding: 10px;
+// 			background: #333;
+// 			color: white;
+// 		}
+// 	}
+// }

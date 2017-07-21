@@ -1,0 +1,28 @@
+$primray-color: #242429;
+$secondary-color: #bf845c;
+
+.find-us {
+	width: 100vw;
+	.container {
+		color: $secondary-color;
+		padding-top: 150px;
+		width: 90vw;
+		height: 100vh;
+	}
+	.spirit-display {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
+		flex-wrap:wrap;
+		height: auto;
+		.productContainer {
+			width: 33%;
+		}
+	}
+	#map {
+	  width: 100%;
+	  height: 400px;
+	  background-color: grey;
+	}
+}

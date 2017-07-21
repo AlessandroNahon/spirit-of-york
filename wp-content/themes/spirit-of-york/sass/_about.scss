@@ -1,0 +1,204 @@
+$primray-color: #242429;
+$secondary-color: #bf845c;
+
+#about {
+	padding-top: 122px;
+	padding-bottom: 100px;
+	@include breakpoint($phone) {
+		padding:0;
+	}
+	.about-section {
+		padding-top: 122px;
+		padding-bottom: 32px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		height: 100vh;
+		width: 100vw;
+		@include breakpoint($phone) {
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			width: 350px;
+			height: 265vh;
+			margin: 0 auto;
+			padding-top: 100px;
+		}
+		@include breakpoint($iPhone) {
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+			align-content: center;
+			width: 300px;
+			height: 300vh;
+			margin: 0 auto;
+			padding-top: 160px;
+		}
+		.about-image {
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			height: 490px;
+			max-height: 800px !important;
+			width: 720px;
+			@include breakpoint($tablet) {
+				width: 45%;
+			}
+			@include breakpoint($phone) {
+				height: 40%;
+				width: 100%;
+				margin-top: 150px;
+				// margin-top: 200px;
+			}
+			@include breakpoint($iPhone) {
+				margin-top: 150px;
+				height: 40%;
+				width: 100%;
+			}
+		}
+		.about-text {
+			right:0;
+			width: 720px;
+			height: 462px !important;
+			max-height: 462px !important;
+			// padding-top: 100px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			padding:0 100px;
+			color: $secondary-color;
+			@include breakpoint($phone-tablet) {
+				padding-top:0;
+				width: 450px;
+			}
+			// @include breakpoint($tablet) {
+			// 	padding:0px;
+			// 	width: 364px;
+			// 	padding-right: 25px;
+			// 	// width: 500px;
+			// 	// margin-right:50px;
+			// }
+			@include breakpoint($phone) {
+				padding-top:0;
+				width: 350px;
+				margin-right: 0;
+				padding-left: 0;
+				padding-right: 0;
+				// padding-bottom: 400px;
+			}
+			@include breakpoint($iPhone) {
+				padding-top:0;
+				width: 300px;
+				margin-right: 0;
+				padding-left: 0;
+				padding-right: 0;
+				margin-top: 100px;
+				margin-bottom: 100px;
+				// position: relative;
+				// left:20px;
+			}
+			p {
+				// position: relative;
+				// top: 25%;
+				// transform: translateY(-25%);
+				// width: 80%;
+				// @include breakpoint($phone) {
+				// 	position: static;
+				// 	top:0;
+				// 	transform: translateY(0%);
+				// }
+			}
+			.primary {
+				font-weight: normal;
+				font-size: 30px;
+				line-height: 35px;
+				letter-spacing: 1px;
+				font-family: 'Surveyor', serif;
+				padding-bottom: 70px;
+				margin-right: 0;
+				padding-right: 0;
+				@include breakpoint($phone) {
+					width: 350px;
+					// padding-bottom: 140px;
+				}
+				@include breakpoint($iPhone) {
+					width: 280px;
+					padding-bottom: 70px;
+				}
+			}
+			.secondary {
+				font-size: 14px;
+				letter-spacing: .3px;
+				font-weight: lighter;
+				@include breakpoint($phone) {
+					width: 350px;
+				}
+				@include breakpoint($iPhone) {
+					width: 280px;
+				}
+			}
+		}
+	}
+	.container {
+		width: 90vw;
+		padding-top: 100px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.team-section {
+		display: flex;
+		align-items: center;
+		// display: none;
+		.team-text {
+			color: $secondary-color;
+			width: 600px;
+			h2, h3 {
+				font-weight: lighter;
+			}
+			h2 {
+				text-transform: uppercase;
+			}
+			p {
+				width: 300px;
+			}
+		}
+	}
+	.Brent {
+		display: none;
+	}
+	.team-menu {
+		color: $secondary-color;
+		list-style: none;
+		padding-left: 0;
+		li {
+			cursor: pointer;
+			display: block;
+			width: 200px;
+			line-height: 25px;
+			position: relative;
+			.select {
+				margin-left: 10px;
+				content:'';
+				position: absolute;
+				top: 45%;
+				transform: translateY(-45%);
+				width: 40px;
+				height: 1px;
+				background-color: $secondary-color;
+			}
+		}
+	}
+	.about-footer {
+		margin-top: 100px;
+		width: 100vw;
+		height: 100vh;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+}

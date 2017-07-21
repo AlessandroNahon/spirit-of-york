@@ -1,0 +1,44 @@
+$primray-color: #242429;
+$secondary-color: #bf845c;
+
+#legal {
+	position: fixed;
+	z-index: 300;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	top:0;
+	left:0;
+	background-color: $primray-color;
+	color: $secondary-color;
+	overflow: hidden;
+	img {
+		height: 70px;
+		width: 70px;
+		margin-bottom: 25px; 
+	}
+	p {
+		font-family: 'FoundersGrotesk-Light';
+		letter-spacing: 1px;
+		margin-bottom: 30px;
+	}
+	button {
+		font-family: 'FoundersGrotesk-Light';
+		color: $secondary-color;
+		background-color: transparent;
+		border:none;
+		border-bottom: 1px solid transparent;
+		outline: none;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		padding: 0 20px;
+		transition: .3s ease-in-out;
+		text-align: center;
+		&:hover {
+			border-bottom: 1px solid $secondary-color;
+		}
+	}
+}
